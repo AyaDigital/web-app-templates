@@ -1,0 +1,82 @@
+<!doctype html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,700&display=swap"/>
+		<link rel="stylesheet" href="../../public/styles.css"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+		<title>AYA Digital, LLC Telehealth</title>
+		<link href="css/styles.css" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="js/script.js" defer></script>
+	</head>
+	<body>
+		<div id="root" style="width:100%">
+			<div class='header'>
+				<div class="prevpage">
+					<a href="#">
+						<img src="images/arrow-left.svg" width="20px">
+					</a>
+				</div>
+				<div><img src='images/logo.png'></div>
+			</div>
+			<div class="base-block">
+				<div class="sign-in">Sign in</div>
+				<div class="outer-form-block">
+					<div class="prevpage-desktop">
+						<a href="#">
+							<img src="images/arrow-left.svg" width="20px">
+						</a>
+					</div>
+					<form id="kc-form-login" onsubmit="login.disabled = true; return true;" action="${url.loginAction}" method="post">
+						<div class="inner-form-block">
+							<div class="form-block">
+								<!--#if !usernameHidden??-->
+								<div class="username">
+
+									<input tabindex="1" id="username" class="username-input" name="username" required value=""  type="text"  autocomplete="off"
+										   aria-invalid="<#if messagesPerField.existsError('username','password')>true</#if>"
+									/>
+									<label for="username" class="${properties.kcLabelClass!}">Email or phone number</label>
+									<!--#if messagesPerField.existsError('username','password')>
+										<span id="input-error" class="${properties.kcInputErrorMessageClass!}" aria-live="polite">
+												${kcSanitize(messagesPerField.getFirstError('username','password'))?no_esc}
+										</span>
+									</#if-->
+								</div>
+									<!--/#if-->
+
+								<div class="password">
+
+									<input tabindex="2" id="password" class="password-input" name="password" required type="password" autocomplete="off"
+									/>
+									<label for="password" class="">Enter a temporary Password</label>
+									<i class="fa-solid fa-eye-slash" id="eye" aria-hidden="true"></i>
+
+									<!--#if usernameHidden?? && messagesPerField.existsError('username','password')>
+										<span id="input-error" class="${properties.kcInputErrorMessageClass!}" aria-live="polite">
+												${kcSanitize(messagesPerField.getFirstError('username','password'))?no_esc}
+										</span>
+									</#if-->
+
+								</div>
+
+								<div class="forgot-password">
+											<!--#if realm.resetPasswordAllowed-->
+												<span>Forgot password?</span>
+												<span class="link"><a tabindex="5" href="#">Restore</a></span>
+											<!--/#if-->
+								</div>
+							</div>
+							<div id="kc-form-buttons" class="submit">
+								<!--input type="hidden" id="id-hidden-input" name="credentialId" <#if auth.selectedCredential?has_content>value="${auth.selectedCredential}"</#if>/-->
+								<input tabindex="4" class="" name="login" id="kc-login" type="submit" value="Login"/>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

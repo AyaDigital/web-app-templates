@@ -1,0 +1,64 @@
+<!doctype html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,700&display=swap"/>
+		<link rel="stylesheet" href="../../public/styles.css"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+		<title>AYA Digital, LLC Telehealth</title>
+		<link href="css/styles.css" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body>
+		<div id="root" style="width:100%">
+			<div class='header'>
+				<div><img src='images/logo.png'></div>
+			</div>
+			<div class="base-block">
+				<div class="select">Select the Login method</div>
+				<div class="outer-form-block">
+					<form id="kc-form-login" onsubmit="login.disabled = true; return true;" action="${url.loginAction}" method="post">
+						<div class="inner-form-block">
+							<div class="form-block">
+								<!--#if !usernameHidden??-->
+								<div class="email">
+
+									<button tabindex="1" id="username" class="username-input" name="username" required value=""  type="text"  autocomplete="off"
+										   aria-invalid="<#if messagesPerField.existsError('username','password')>true</#if>"
+									>
+										<div class="picture"><img src='images/envelope.svg' width="20px"></div>
+										<div>Sign in with Email</div>
+									</button>
+								</div>
+									<!--/#if-->
+
+								<div class="google">
+
+									<button tabindex="2" id="password" class="password-input" name="password" required type="password" autocomplete="off"
+									>
+										<div class="picture"><img src='images/google.png' width="20px"></div>
+										<div>Sign in with Google</div>
+									</button>
+
+
+								</div>
+
+								<div class="have-account">
+											<!--#if realm.resetPasswordAllowed-->
+												<span class="text">Already heave an account?</span>
+												<span class="link"><a tabindex="5" href="#">Sign in</a></span>
+											<!--/#if-->
+								</div>
+								<div class="agreement">
+									By registering you agree to the
+									<a href="#">Terms of Servise Privacy Policy</a> and <a href="#">Cookie Policy</a>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

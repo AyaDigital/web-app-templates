@@ -1,0 +1,146 @@
+body {
+	background-color: rgba(245, 245, 245, 1);
+	margin: 0px;
+	width: 100%;
+    min-height: 100vh;
+    max-height: 100%;
+}
+
+@media screen and (max-width: 568px) {
+	body .header {
+		width: 100%;
+	}
+	body {
+		background-color: rgba(255, 255, 255, 1);
+	}
+	body .outer-form-block {
+		display: block;
+	}
+	
+	body form .submit input {
+		width: 86%;
+	}
+	body form {
+		height: 100%;
+	}
+	body .header {
+		padding: 20px 10% 20px 10%;
+		box-shadow: none;
+		width: auto;
+	}
+	
+	body .base-block .container .buttons-block button {
+		width: 150px;
+	}
+
+	body .container .userInput input {
+		width: 20px;
+		height: 40px;
+	}
+}
+
+body .header .prevpage {
+	display: none;
+}
+
+body .base-block .prevpage-desktop {
+	position: relative;
+	left: 25px;
+	top: -11%;
+	width: auto;
+}
+
+.header {
+    display: flex;
+	background-color: rgba(255, 255, 255, 1);
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 256px 20px min(250px, 39%);
+    box-shadow: 0px 6px 8px 1px rgba(0, 0, 0, 0.08);
+	margin-bottom: clamp(10px, 8vh, 206px);
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.base-block {
+	display: flex;
+    flex-direction: row;
+	justify-content: space-around;
+	width: 100%;
+	overflow: hidden;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	row-gap: 32px;
+	border-radius: 16px;
+    background-color: white;
+    padding: 32px;
+}
+
+.base-block .container .buttons-block button.active {
+	color: white;
+	background-color: rgba(44, 121, 206, 1);
+	border: 1px solid rgba(198, 198, 200, 1);
+}
+.base-block .container .buttons-block button.resend {
+	color: white;
+	background-color: rgba(44, 121, 206, 1);
+	border: 1px solid rgba(198, 198, 200, 1);
+}
+
+.base-block .container .buttons-block button {
+	width: 200px;
+	height: 40px;
+	padding: 9px 24px 12px 24px;
+	border-radius: 8px;
+	border: 1px solid;
+	font-family: Manrope;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 20px;
+	letter-spacing: 0px;
+	text-align: center;
+	cursor: pointer;
+	color: rgba(44, 121, 206, 1);
+	background-color: white;
+	border: 1px solid rgba(44, 121, 206, 1);
+}
+
+.base-block .container .buttons-block {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	column-gap: 16px;
+}
+
+.base-block .container .title {
+	font-family: Manrope;
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 32px;
+	letter-spacing: 0px;
+	text-align: center;
+}
+
+.container .userInput input {
+	width: 80px;
+	height: 80px;
+	padding: 8px 8px 8px 16px;
+	border-radius: 8px;
+	border: 1px solid rgba(198, 198, 200, 1);
+	font-family: Manrope;
+	font-size: 32px;
+	font-weight: 400;
+	line-height: 40px;
+	letter-spacing: 0px;
+	text-align: center;
+}
+
+.container .userInput {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	column-gap: 16px;
+}

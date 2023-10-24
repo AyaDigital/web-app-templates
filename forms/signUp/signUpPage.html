@@ -1,0 +1,115 @@
+<!doctype html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,700&display=swap"/>
+		<link rel="stylesheet" href="../../public/styles.css"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+		<title>AYA Digital, LLC Telehealth</title>
+		<link href="css/styles.css" rel="stylesheet">
+		<link href="css/multi-select-tag.css" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="js/multi-select-tag.js" defer></script>
+		<script src="js/script.js" defer></script>
+	</head>
+	<body>
+			<div class='header'>
+				<div class="prevpage">
+					<a href="#">
+						<img src="images/arrow-left.svg" width="20px">
+					</a>
+				</div>
+				<div><img src='images/logo.png'></div>
+			</div>
+			<div class="base-block">
+				<div class="sign-in">Sign up</div>
+				<div class="outer-form-block">
+					<div class="prevpage-desktop">
+						<a href="#">
+							<img src="images/arrow-left.svg" width="20px">
+						</a>
+					</div>
+					<form id="kc-form-login" onsubmit="login.disabled = true; return true;" action="${url.loginAction}" method="post">
+						<div class="inner-form-block">
+							<div class="form-block">
+
+								<div class="firstName">
+									<p for="password" class="">First Name</p>
+									<input tabindex="1" id="firstName" class="firstName-input" name="firstName" required value=""  type="text"  autocomplete="off"
+										   aria-invalid="<#if messagesPerField.existsError('firstName','lastName')>true</#if>"
+									/>
+									<label for="firstName" class="${properties.kcLabelClass!}">Enter your First Name</label>
+
+								</div>
+
+								<div class="lastName">
+									<p for="password" class="">Last Name</p>
+									<input tabindex="2" id="lastName" class="lastName-input" name="lastName" required type="lastName" autocomplete="off"
+									/>
+									<label for="lastName" class="">Enter your Last Name</label>
+
+
+								</div>
+								<div class="contact">
+									<p for="password" class="">Email or Phone</p>
+									<input tabindex="2" id="contact" class="contact-input" name="contact" required type="contact" autocomplete="off"
+									/>
+									<label for="contact" class="">Enter your email or phone number</label>
+
+
+								</div>
+								<div class="insurance">
+									<p for="insurance" class="">Insurance Company</p>
+									<select id="insurance" class="insurance-input" name="insurance"  multiple>
+										<option value="1">Progressive</option>
+										<option value="2">MetLife</option>
+										<option value="3">American International Group</option>
+										<option value="4">Marsh & McLennan</option>
+										<option value="5">Gallagher</option>
+									</select>
+									<label for="insurance" class="">Choose insurance company</label>
+
+								</div>
+								<div class="password">
+									<p for="password" class="">Password</p>
+									<input tabindex="2" id="password" class="password-input" name="password" required type="password" autocomplete="off"
+									/>
+									<div class="password-label">
+										<i class="fa-solid fa-eye-slash" id="eye" aria-hidden="true"></i>
+										<label for="password" class="">Enter your password</label>
+									</div>
+
+								</div>
+								<div class="password-repeat">
+									<p for="password" class="">Duplicate password</p>
+									<input
+										tabindex="2"
+										id="password-repeat"
+										class="password-repeat-input"
+										name="password-repeat"
+										required
+										type="password-repeat"
+										autocomplete="off"
+									/>
+									<div class="password-repeat-label">
+										<i class="fa-solid fa-eye-slash" id="eye" aria-hidden="true"></i>
+										<label for="password-repeat" class="">Duplicate lastName</label>
+									</div>
+
+								</div>
+
+								<div class="have-account">
+									<span class="text">Already heave an account?</span>
+									<span class="link"><a tabindex="5" href="#">Sign in</a></span>
+								</div>
+							</div>
+							<div id="kc-form-buttons" class="submit">
+								<input tabindex="4" class="" name="login" id="kc-login" type="submit" value="Login"/>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+	</body>
+</html>

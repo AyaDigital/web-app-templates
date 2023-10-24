@@ -1,0 +1,341 @@
+body {
+	background-color: rgba(245, 245, 245, 1);
+	margin: 0px;
+	width: 100%;
+    min-height: 100vh;
+    max-height: 100%;
+}
+
+@media screen and (max-width: 568px) {
+	body .form-block .firstName input,
+	body .form-block .lastName input,
+	body .form-block .contact input,
+	body .form-block .insurance input,
+	body .form-block .password-repeat input,
+	body .form-block .password input {
+		width: auto;
+	}
+	body .header {
+		width: 100%;
+	}
+	body {
+		background-color: rgba(255, 255, 255, 1);
+	}
+	body .outer-form-block {
+		display: block;
+	}
+	body .sign-in {
+		text-align: left;
+		margin-left: 34px;
+	}
+	body .form-block label {
+		max-width: 60vw;
+	}
+	
+	body form .submit input {
+		width: 86%;
+	}
+	body form {
+		height: 100%;
+	}
+	body .header {
+		padding: 20px 10% 20px 10%;
+		box-shadow: none;
+		width: auto;
+	}
+	body .header .prevpage {
+		flex-wrap: wrap;
+		display: flex !important;
+		align-content: center;
+	}
+	body .base-block .prevpage-desktop {
+		display: none;
+	}
+	body .select {
+		height: 200px;	
+	}
+}
+
+body .header .prevpage {
+	display: none;
+}
+
+body .base-block .prevpage-desktop {
+	position: relative;
+	left: 25px;
+	top: -11%;
+	width: auto;
+}
+
+.header {
+    display: flex;
+	background-color: rgba(255, 255, 255, 1);
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 256px 20px min(250px, 39%);
+    box-shadow: 0px 6px 8px 1px rgba(0, 0, 0, 0.08);
+	margin-bottom: clamp(10px, 8vh, 206px);
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.base-block {
+	display: flex;
+    flex-direction: column;
+	width: 100%;
+	overflow: hidden;
+}
+
+.sign-in {
+	font-family: Manrope;
+	font-size: 34px;
+	font-weight: 700;
+	line-height: 32px;
+	letter-spacing: 0px;
+	text-align: center;
+	margin-bottom: 32px;
+}
+
+.outer-form-block {
+	width: 100%;
+	display: flex;
+    flex-direction: row;
+    justify-content: center;
+	font-family: Manrope;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 32px;
+	letter-spacing: 0px;
+	height: clamp(10vh, 71vh, 61vh);
+	min-height: 100vh;
+}
+
+form .submit input {
+	width: 444px;
+	height: 44px;
+	padding: 12px 24px 12px 24px;
+	border-radius: 8px;
+	background-color: rgba(44, 121, 206, 1);
+	color: white;
+	border: none;
+}
+form .submit {
+	margin-top: 32px;
+	margin-bottom: 32px;
+	display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+form {
+	border-radius: 16px;
+	background-color: white;
+	padding-bottom: 32px;
+}
+
+form .form-block {
+	width: 100%;
+	height: auto;
+	top: 208px;
+	left: 706px;
+	padding: 32px;
+    box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	row-gap: 0px;
+}
+
+form .inner-form-block p {
+	margin: 0;
+}
+
+form .inner-form-block {
+	height: 100%;
+	width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+	overflow: hidden;
+}
+
+form .form-block .forgot-password {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	column-gap: 20px;
+}
+
+form .form-block .forgot-password .link a {
+	color: rgba(44, 121, 206, 1);
+	text-decoration: none;
+}
+
+.form-block .firstName,
+.form-block .lastName,
+.form-block .contact,
+.form-block .insurance,
+.form-block .password-repeat,
+.form-block .password {
+	display: flex;
+	flex-direction: column;
+}
+
+.mult-select-tag .input-container {
+	background-color: rgba(245, 245, 245, 1);
+	transition: 0.9s ease-in;
+}
+
+.form-block .firstName input,
+.form-block .lastName input,
+.form-block .contact input,
+.form-block .insurance input,
+.form-block .password-repeat input,
+.form-block .password input {
+	width: 444px;
+    height: 55px;
+	padding: 8px 0px 8px 16px;
+	border-radius: 12px;
+	border: 2px;
+	background-color: rgba(245, 245, 245, 1);
+	transition: 0.9s ease-in;
+	box-sizing: border-box;
+}
+
+
+.form-block .firstName input:focus,
+.form-block .lastName input:focus,
+.form-block .contact input:focus,
+.form-block .insurance input:focus,
+.form-block .password-repeat input:focus,
+.form-block .password input:focus {
+	background-color: rgba(255, 255, 255, 1);
+	transition: 0.1s ease-in;
+	border: 2px solid rgba(44, 121, 206, 1);
+	outline: none;
+}
+
+.form-block .insurance .mult-select-tag button {
+	z-index: 111;
+}
+
+.form-block label {
+	position: relative;
+	top: -43px;
+	left: 20px;
+    padding: 0px 10px 0px 10px;
+	font-family: Manrope;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	transition: 0.5s ease-in;
+	color: rgba(60, 60, 67, 0.6);
+	text-overflow: ellipsis;
+    max-width: 37vw;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.form-block .password-repeat-label,  .form-block .password-label {
+	display: flex;
+	flex-direction: row;
+}
+
+.form-block .firstName input:valid ~ label[for="firstName"],
+.form-block .lastName input:valid ~ label[for="lastName"],
+.form-block .contact input:valid ~ label[for="contact"],
+.form-block .insurance input:valid ~ label[for="insurance"],
+.form-block .password input:valid ~ .password-label label[for="password"],
+.form-block .password-repeat input:valid ~ .password-repeat-label label[for="password-repeat"],
+.form-block .firstName input:focus ~ label[for="firstName"],
+.form-block .lastName input:focus ~ label[for="lastName"],
+.form-block .contact input:focus ~ label[for="contact"],
+.form-block .insurance select:focus ~ label[for="insurance"],
+.form-block .firstName input:focus ~ label[for="firstName"],
+.form-block .password input:focus ~ .password-label label[for="password"],
+.form-block .password-repeat input:focus ~ .password-repeat-label label[for="password-repeat"]{
+	color: transparent;
+}
+
+.mult-select-tag:has(.wrapper .body .input-container:not(:empty)) ~ label[for="insurance"] {
+	color: transparent;
+	z-index: -1;
+}
+
+.form-block .password input:valid {
+	background-color: rgba(255, 255, 255, 1);
+	transition: 0.1s ease-in;
+	border: 2px solid rgba(44, 121, 206, 1);
+	outline: none;
+}
+.form-block .password-repeat input:valid {
+	background-color: rgba(255, 255, 255, 1);
+	transition: 0.1s ease-in;
+	border: 2px solid rgba(44, 121, 206, 1);
+	outline: none;
+}
+
+.mult-select-tag .body .input-container{
+	border-radius: 12px 0px 0px 12px;
+}
+.mult-select-tag .body {
+	max-width: 444px;
+	border-radius: 12px;
+	height: 55px;
+}
+
+.mult-select-tag .drawer {
+	border: none;
+}
+
+.form-block .password-repeat-label .fa-solid,
+.form-block .password-label .fa-solid {
+	right: -85%;
+    top: -26px;
+	font-size: 1.2rem;
+	color: #999;
+	cursor: pointer;
+	position: relative;
+	transform: translateY(-50%);
+}
+
+.form-block .password-label .fa-solid:active ~ .password-input,
+.form-block .password-repeat .password-repeat-label .fa-solid:active ~ .password-repeat-input {
+  type: text;
+}
+
+.have-account {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	column-gap: 20px;
+}
+
+.have-account .text {
+	color: rgba(0, 0, 0, 0.5);
+}
+
+.have-account .link a {
+	color: rgba(44, 121, 206, 1);
+	text-decoration: none;
+}
+
+.agreement {
+	color: rgba(0, 0, 0, 0.5);
+	max-width: 444px;
+    text-align: center;
+}
+
+.agreement a{
+	color: rgba(0, 0, 0, 0.8);
+}
+
+.select {
+	font-family: Manrope;
+	font-size: 34px;
+	font-weight: 700;
+	line-height: 32px;
+	letter-spacing: 0px;
+	text-align: center;
+	margin-bottom: 32px;
+}
